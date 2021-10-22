@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 10px;
+    
+}
+
+body {
+  font-family: Oswald, sans-serif;
+}
+
+div#menu-slider {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    transform: translateX(-100vw);
+}
+div#menu-slider.chiudi {
+    transform: translateX(-100vw);
+    transition: all .4s ease-in-out;
+}
+div#menu-slider.attiva {
+    transform: translateX(0);
+    transition: all .4s ease-in-out;
+}
+nav, nav ul {
+    height: 100vh;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+nav ul li {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+nav li:hover {
+    border-left: 5px solid rgb(255, 0, 0);
+    background-color: rgba(200, 10, 10, 0.15);
+}
+
+
+
+div#bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/DevNewConcept.png);
+    background-size: cover;
+}
+div#menu-icon {
+    position: fixed;
+    display: inline;
+    cursor: pointer;
+    z-index: 10;
+    top: 1.4rem;
+    left: 2.4rem;
+}
+.barra-1, .barra-2, .barra-3 {
+    display: block;
+    width: 3.5rem;
+    height: 3px;
+    background-color: rgb(230,230,230);
+    margin: 1rem 0;
+    transition: .5s;
+    border-radius: 2px;
+}
+#menu-icon.trasforma .barra-2 {
+    opacity: 0;
+}
+#menu-icon.trasforma .barra-1 {
+    transform: rotate(-45deg) translate(-0.8rem, 0.8rem);
+}
+#menu-icon.trasforma .barra-3 {
+    transform: rotate(45deg) translate(-0.9rem, -0.8rem);
+}
+#search-icon {
+    position: fixed;
+    top: 1.8rem;
+    right: 2.4rem;
+    z-index: 10;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.2rem;
+}
+#search-slider {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.85);
+    transform: translateX(100vw);
+}
+#search-slider.chiudi {
+    transform: translateX(100vw);
+    transition: all .4s ease-in-out;
+}
+#search-slider.attiva {
+    transform: translateX(0);
+    transition: all .4s ease-in-out;
+}
+#search-wrapper {
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+#search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid rgb(255, 0, 0);
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0;
+    color: rgb(255, 255, 255);
+}
+#search-input::placeholder {
+    font-weight: normal;
+}
+#search-result {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
